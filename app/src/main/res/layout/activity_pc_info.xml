@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/pcImg"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:paddingEnd="10dp"
+            android:background="@drawable/ic_computer_monitor_and_mouse"
+            android:text="1"
+            android:paddingBottom="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/hintColor"
+            android:textSize="60sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/serial"
+            android:layout_below="@id/pcImg"
+            android:text="@string/serial_numbers"
+            android:textColor="@color/hintColor"
+            android:drawableStart="@drawable/mini_serial"
+            android:drawablePadding="5dp"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/serial1"
+            android:layout_below="@id/pcImg"
+            android:padding="5dp"
+            android:text="MNJH1452MN545BHGHS"
+            android:textColor="@color/textColor"
+            android:layout_toEndOf="@id/serial" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buy"
+            android:text="@string/date_of_buyings"
+            android:layout_below="@id/serial"
+            android:padding="5dp"
+            android:drawableStart="@drawable/mini_calendar"
+            android:drawablePadding="5dp"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/buy1"
+            android:layout_toEndOf="@id/buy"
+            android:layout_below="@id/serial1"
+            android:textColor="@color/textColor"
+            android:text="15/4/2020"
+            android:layout_marginTop="7dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/proc"
+            android:layout_below="@id/buy"
+            android:padding="5dp"
+            android:drawableStart="@drawable/mini_processor"
+            android:drawablePadding="5dp"
+            android:text="@string/processors"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/proc1"
+            android:layout_below="@id/buy1"
+            android:layout_toEndOf="@id/proc"
+            android:padding="5dp"
+            android:text="core i3"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateP"
+            android:text="@string/state"
+            android:padding="5dp"
+            android:layout_below="@id/buy1"
+            android:layout_toEndOf="@id/proc1"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:id="@+id/processorState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buy1"
+            android:layout_toEndOf="@id/stateP"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:drawableStart="@drawable/need_repair" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ram"
+            android:layout_below="@id/proc"
+            android:padding="5dp"
+            android:drawableStart="@drawable/mini_ram"
+            android:drawablePadding="5dp"
+            android:text="@string/ram"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ram1"
+            android:layout_below="@id/proc1"
+            android:layout_toEndOf="@id/ram"
+            android:padding="5dp"
+            android:text="4 GB"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="7dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateR"
+            android:text="@string/state"
+            android:padding="5dp"
+            android:layout_below="@id/proc1"
+            android:layout_toEndOf="@id/proc1"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:id="@+id/ramState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/proc1"
+            android:layout_toEndOf="@id/stateR"
+            android:padding="5dp"
+            android:layout_marginTop="3dp"
+            android:drawableStart="@drawable/need_repair" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hard"
+            android:layout_below="@id/ram"
+            android:padding="5dp"
+            android:drawableStart="@drawable/mini_hdd"
+            android:drawablePadding="5dp"
+            android:text="@string/hdds"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hard1"
+            android:layout_below="@id/ram1"
+            android:layout_toEndOf="@id/hard"
+            android:padding="5dp"
+            android:text="500 GB"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="7dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateH"
+            android:text="@string/state"
+            android:padding="5dp"
+            android:layout_below="@id/stateR"
+            android:layout_toEndOf="@id/hard1"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:id="@+id/hardState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ramState"
+            android:layout_toEndOf="@id/stateH"
+            android:padding="5dp"
+            android:drawableStart="@drawable/need_repair" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mousee"
+            android:layout_below="@id/hard"
+            android:padding="5dp"
+            android:drawableStart="@drawable/mini_mouse"
+            android:text="@string/mouse"
+            android:drawablePadding="5dp"
+            android:textColor="@color/textColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateM"
+            android:text="@string/state"
+            android:padding="5dp"
+            android:layout_below="@id/stateH"
+            android:layout_toEndOf="@id/mousee"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:id="@+id/mouseState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stateH"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@id/stateM"
+            android:drawableStart="@drawable/good"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/keyb"
+            android:layout_below="@id/mousee"
+            android:padding="5dp"
+            android:drawableStart="@drawable/mini_keyboard"
+            android:text="@string/keyboard"
+            android:drawablePadding="5dp"
+            android:textColor="@color/textColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateK"
+            android:text="@string/state"
+            android:padding="5dp"
+            android:layout_below="@id/stateM"
+            android:layout_toEndOf="@id/keyb"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:id="@+id/keyboardState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stateM"
+            android:layout_toEndOf="@id/stateK"
+            android:padding="5dp"
+            android:layout_marginTop="3dp"
+            android:drawableStart="@drawable/good" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/screeen"
+            android:layout_below="@id/keyb"
+            android:padding="5dp"
+            android:drawableStart="@drawable/mini_screen"
+            android:text="@string/monitor"
+            android:drawablePadding="5dp"
+            android:textColor="@color/textColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateS"
+            android:text="@string/state"
+            android:padding="5dp"
+            android:layout_below="@id/stateK"
+            android:layout_toEndOf="@id/screeen"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:id="@+id/monitorState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stateK"
+            android:layout_toEndOf="@id/stateS"
+            android:padding="5dp"
+            android:layout_marginTop="3dp"
+            android:drawableStart="@drawable/good" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gpu"
+            android:layout_below="@id/screeen"
+            android:padding="5dp"
+            android:drawableStart="@drawable/mini_gpu"
+            android:text="@string/gpu"
+            android:drawablePadding="5dp"
+            android:textColor="@color/textColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateG"
+            android:text="@string/state"
+            android:padding="5dp"
+            android:layout_below="@id/stateS"
+            android:layout_toEndOf="@id/gpu"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/hintColor" />
+
+        <TextView
+            android:id="@+id/gpuState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stateS"
+            android:layout_toEndOf="@id/stateG"
+            android:padding="5dp"
+            android:layout_marginTop="3dp"
+            android:drawableStart="@drawable/good" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/soft"
+            android:text="@string/software"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/gpu"
+            android:padding="5dp"
+            android:textColor="@color/hintColor"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/win"
+            android:layout_below="@id/soft"
+            android:padding="5dp"
+            android:text="@string/windowss"
+            android:drawableStart="@drawable/mini_windows"
+            android:drawablePadding="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/hintColor"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/win1"
+            android:layout_below="@+id/soft"
+            android:layout_toEndOf="@id/win"
+            android:layout_marginTop="10dp"
+            android:text="10"
+            android:padding="5dp"
+            android:textColor="@color/textColor"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateW"
+            android:layout_below="@id/soft"
+            android:layout_toEndOf="@id/win1"
+            android:layout_marginStart="70dp"
+            android:padding="5dp"
+            android:text="@string/state"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/hintColor"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/soft"
+            android:layout_toEndOf="@id/stateW"
+            android:padding="5dp"
+            android:layout_marginTop="7dp"
+            android:drawableStart="@drawable/good"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prog"
+            android:layout_below="@id/win"
+            android:drawableStart="@drawable/mini_prog"
+            android:drawablePadding="5dp"
+            android:text="@string/programs"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/hintColor"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/win"
+            android:layout_toEndOf="@id/prog"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="v.s , NB , Android , word , excel , W.B ,
+chrome , telegram"
+            android:textColor="@color/textColor"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_working"
+            android:textColor="@color/hintColor"
+            android:layout_below="@+id/prog"
+            android:id="@+id/not"
+            android:padding="5dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notworkingprog"
+            android:layout_below="@id/prog"
+            android:layout_toEndOf="@id/not"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/hintColor"
+            android:text="V.S , Chrome , Work bench" />
+    </RelativeLayout>
+</ScrollView>

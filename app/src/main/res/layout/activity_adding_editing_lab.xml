@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sci.labtrack.Lab.AddingAndEditingLab">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_225sdp"
+                android:src="@drawable/labimg"
+                android:id="@+id/imageView" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/new_lab"
+                android:layout_below="@+id/imageView"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_20ssp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="@dimen/_225sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:id="@+id/labnameL"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_centerHorizontal="true"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/labname"
+                    android:hint="@string/lab_name"
+                    android:textColorHint="@color/hintColor"
+                    android:textColor="@color/textColor"
+                    android:inputType="text"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@color/cursor" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="@dimen/_225sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/maxCapacityL"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_below="@+id/labnameL">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/maxCapacity"
+                    android:hint="@string/lab_max_capacity"
+                    android:textColorHint="@color/hintColor"
+                    android:textColor="@color/textColor"
+                    android:inputType="number"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@color/cursor" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="@dimen/_225sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/locationL"
+                android:layout_below="@id/maxCapacityL"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_11sdp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/location"
+                    android:textColorHint="@color/hintColor"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@color/cursor"
+                    android:textColor="@color/textColor"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/save"
+                android:text="@string/save"
+                android:layout_below="@id/locationL"
+                android:layout_marginTop="@dimen/_38sdp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/textButtonsColor"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:layout_width="@dimen/_113sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/deletelab"
+                android:layout_below="@+id/save"
+                android:layout_marginTop="@dimen/_63sdp"
+                android:textColor="@color/textButtonsColor"
+                android:background="@drawable/button_background"
+                android:text="@string/delete_lab"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone">
+
+            </Button>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

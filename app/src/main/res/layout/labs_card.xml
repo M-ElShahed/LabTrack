@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="4dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="30dp"
+        app:contentPadding="3dp"
+        app:cardBackgroundColor="@color/hintColor"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backGroundColor"
+            >
+
+            <ImageView
+                android:id="@+id/labimg"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/labimg" />
+
+            <TextView
+                android:id="@+id/labname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/labimg"
+                android:hint="Labe Name"
+                android:text=""
+                android:textColor="@color/hintColor"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/workingpc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/labname"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/labimg"
+                android:text=""
+                android:hint="working 10Pc"
+                android:textColor="@color/textColor"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/notworkingpc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/labname"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/workingpc"
+                android:text=""
+                android:hint="needrepair 1Pc"
+                android:textColor="@color/hintColor"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/totalPcs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notworkingpc"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/labimg"
+                android:text=""
+                android:hint="total 3/50pc"
+                android:textColor="@color/textColor"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

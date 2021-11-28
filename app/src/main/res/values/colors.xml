@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimaryDark">#0C2F4D</color>
+    <color name="colorPrimary">#0e3558</color>
+    <color name="backGroundColor">#FDFDFD</color>
+    <color name="textColor">#003366</color>
+    <color name="textButtonsColor">#FFFFFF</color>
+    <color name="buttonsColor">#08A2BD</color>
+    <color name="hintColor">#c31826</color>
+    <color name="darkTextColor">#0C2F4D</color>
+    <color name="colorAccent">#c31826</color>
+    <color name="cursor">#c31826</color>
+    <color name="b_pressed">#FFFFFF</color>
+    <color name="bt_pressed">#08A2BD</color>
+    <color name="Selection">#B8F4FD</color>
+    <color name="link">#003366</color>
+
+</resources>

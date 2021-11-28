@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="7dp"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:text="@string/report_or_fix_pc_problem"
+        android:textColor="@color/colorPrimaryDark"/>
+    <TextView
+        android:id="@+id/goodText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Good"
+        android:layout_below="@id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:textSize="@dimen/_10ssp"
+        android:drawableEnd="@drawable/blue_circle"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/not_good"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/_10ssp"
+        android:layout_below="@id/textView"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:drawableEnd="@drawable/red_circle"
+        />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/goodText"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/softwareRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:text="@string/software" />
+
+        <RadioButton
+            android:id="@+id/hardwareRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="@string/hardware" />
+
+        <RadioButton
+            android:id="@+id/otherRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:text="@string/other" />
+
+    </RadioGroup>
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/hardwareList"
+     android:layout_width="match_parent"
+     android:layout_below="@+id/radioGroup"
+     android:layout_marginTop="@dimen/_10sdp"
+     android:layout_height="wrap_content">
+
+     <CheckBox
+         android:id="@+id/cpuCheck"
+         android:layout_width="@dimen/_80sdp"
+         android:layout_height="wrap_content"
+         android:buttonTint="@color/colorPrimary"
+         android:text="@string/cpu"
+         android:layout_marginEnd="@dimen/_50sdp"
+         app:layout_constraintTop_toTopOf= "@id/hardwareList"
+         app:layout_constraintStart_toStartOf="parent" />
+
+     <CheckBox
+         android:id="@+id/ramCheck"
+         android:layout_width="@dimen/_80sdp"
+         android:layout_height="wrap_content"
+         android:buttonTint="@color/colorPrimary"
+         android:text="@string/ramm"
+         android:layout_marginStart="@dimen/_6sdp"
+         android:layout_marginEnd="@dimen/_6sdp"
+         app:layout_constraintEnd_toStartOf="@+id/hddCheck"
+         app:layout_constraintStart_toEndOf="@id/cpuCheck"
+         app:layout_constraintTop_toTopOf="@id/hardwareList" />
+
+     <CheckBox
+         android:id="@+id/hddCheck"
+         android:layout_width="@dimen/_80sdp"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/monitorCheck"
+         android:layout_alignParentEnd="true"
+         android:layout_marginEnd="@dimen/_1sdp"
+         android:buttonTint="@color/colorPrimary"
+         android:text="@string/hdd"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toTopOf="@id/hardwareList" />
+     <CheckBox
+         android:id="@+id/mouseCheck"
+         android:layout_width="@dimen/_80sdp"
+         android:layout_height="wrap_content"
+         android:buttonTint="@color/colorPrimary"
+         app:layout_constraintTop_toBottomOf="@id/cpuCheck"
+         app:layout_constraintStart_toStartOf="@id/cpuCheck"
+         android:text="@string/mouse"/>
+     <CheckBox
+         android:id="@+id/keyboardCheck"
+         android:layout_width="@dimen/_80sdp"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         app:layout_constraintTop_toBottomOf="@id/cpuCheck"
+         app:layout_constraintStart_toStartOf="@id/ramCheck"
+         android:buttonTint="@color/colorPrimary"
+         android:text="@string/keyboard"/>
+     <CheckBox
+         android:id="@+id/monitorCheck"
+         android:layout_width="@dimen/_80sdp"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/cpuCheck"
+         app:layout_constraintTop_toBottomOf="@id/cpuCheck"
+         app:layout_constraintStart_toStartOf="@id/hddCheck"
+         android:buttonTint="@color/colorPrimary"
+         android:text="@string/monitor"/>
+ </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/softwareList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/radioGroup">
+        <CheckBox
+            android:id="@+id/windowsCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/windows"/>
+        <CheckBox
+            android:id="@+id/programsCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="30dp"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/programs"/>
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/problemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/softwareList"
+        android:hint="@string/problem_description"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_10sdp"/>
+    <EditText
+        android:id="@+id/missingSoftware"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/softwareList"
+        android:hint="@string/type_your_missing_programs_ex_visualstudio"
+        android:visibility="gone"
+        android:layout_margin="10dp"/>
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:background="@android:color/transparent"
+        android:text="@string/cancel" />
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cancelButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:text="@string/save" />
+
+</RelativeLayout>

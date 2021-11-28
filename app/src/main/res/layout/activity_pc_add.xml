@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.sci.labtrack.PC.PcAddAndEdit">
+
+        <TextView
+            android:id="@+id/procLabel"
+            android:layout_margin="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bDate"
+            android:text="@string/processor"
+            android:drawableStart="@drawable/ic_computer_microprocessor"
+            android:textSize="20sp"
+            android:textColor="@color/textColor"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/serialTextL"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/serialText"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@color/hintColor"
+                android:textColor="@color/textColor"
+                android:drawableStart="@drawable/ic_serial"
+                android:hint="@string/serial_number"
+                android:textColorHint="@color/hintColor"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/generateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/serialTextL"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_generate"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="-30dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberInLabL"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/serialTextL">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/numberInLab"
+                android:layout_height="wrap_content"
+                android:hint="@string/pc_lab_number"
+                android:drawableStart="@drawable/ic_list"
+                android:textColorHint="@color/hintColor"
+                android:textColor="@color/textColor"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@color/cursor"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bDate"
+            android:layout_below="@id/numberInLabL"
+            android:hint="@string/date_of_buying"
+            android:textColor="@color/hintColor"
+            android:textColorHint="@color/hintColor"
+            android:textSize="25sp"
+            android:drawableStart="@drawable/ic_spring_desktop_calendar_variant"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ramTextL"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/spinner">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ramText"
+                android:drawableStart="@drawable/ic_random_access_memory_chip"
+                android:hint="@string/ram_capacity"
+                android:textColorHint="@color/hintColor"
+                android:inputType="number"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@color/cursor"
+                android:textColor="@color/textColor">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/HDDTextL"
+            android:layout_below="@id/ramTextL"
+            android:layout_centerHorizontal="true"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/HDDText"
+                android:drawableStart="@drawable/ic_hdd"
+                android:hint="@string/hdd"
+                android:textColorHint="@color/hintColor"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@color/cursor"
+                android:inputType="number"
+                android:textColor="@color/textColor">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/GBR"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ramTextL"
+            android:layout_below="@id/spinner"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/gb"
+            android:textColor="@color/hintColor"/>
+
+        <TextView
+            android:id="@+id/GBH"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ramTextL"
+            android:layout_toEndOf="@id/HDDTextL"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/gb"
+            android:textColor="@color/hintColor"/>
+
+        <CheckBox
+            android:id="@+id/Mouse"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/HDDTextL"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:checked="true"
+            android:drawableStart="@drawable/ic_computer_mouse"
+            android:text="@string/mouse"
+            android:textColor="@color/textColor"/>
+
+        <CheckBox
+            android:id="@+id/keyBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Mouse"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:checked="true"
+            android:drawableStart="@drawable/ic_keyboard"
+            android:text="@string/keyboard"
+            android:textColor="@color/textColor"/>
+
+        <CheckBox
+            android:id="@+id/monitor"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/keyBoard"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:checked="true"
+            android:drawableStart="@drawable/ic_screen_of_a_monitor_in_perspective"
+            android:text="@string/monitor"
+            android:textColor="@color/textColor"/>
+
+        <CheckBox
+            android:id="@+id/GPU"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monitor"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:drawableStart="@drawable/ic_gpu"
+            android:text="@string/gpu"
+            android:textColor="@color/textColor"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/winn"
+            android:text="@string/windows"
+            android:textSize="15sp"
+            android:layout_below="@id/GPU"
+            android:textColor="@color/textColor"
+            android:drawableStart="@drawable/mini_windows"
+            android:layout_marginStart="30dp"
+            android:drawablePadding="5dp"
+            android:layout_marginTop="6dp" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/winno"
+            android:layout_toEndOf="@id/winn"
+            android:layout_below="@id/GPU"
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seven"
+                android:text="7"
+                android:textCursorDrawable="@color/cursor"
+                android:textColor="@color/textColor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:padding="5dp" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:id="@+id/eight"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textCursorDrawable="@color/cursor"
+                android:textColor="@color/textColor"
+                android:text="8"
+                android:padding="5dp">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ten"
+                android:layout_marginStart="40dp"
+                android:text="10"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textCursorDrawable="@color/cursor"
+                android:textColor="@color/textColor"
+                android:padding="5dp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/programm"
+            android:text="@string/programs"
+            android:padding="5dp"
+            android:layout_marginStart="30dp"
+            android:drawableStart="@drawable/mini_prog"
+            android:drawablePadding="5dp"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/winn" />
+
+
+        <Button
+            android:id="@+id/pcDone"
+            android:padding="20dp"
+            android:layout_marginTop="90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/programm"
+            android:text="@string/save"
+            android:background="@drawable/button_background"
+            android:textColor="@color/textButtonsColor"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/procLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:entries="@array/cpus"
+            android:theme="@style/spinnerTheme" />
+    </RelativeLayout>
+
+</ScrollView>

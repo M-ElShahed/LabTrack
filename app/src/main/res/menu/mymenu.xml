@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/edit"
+        android:title="@string/edit_lab"
+        android:visible="false" />
+    <item
+        android:id="@+id/delete"
+        android:title="@string/delete"
+        android:visible="false" />
+    <item
+        android:id="@+id/signout"
+        android:title="@string/sign_out" />
+    <item
+        android:id="@+id/sortMenu"
+        android:title="@string/sort"
+        android:visible="false">
+        <menu>
+            <item
+                android:id="@+id/numberSort"
+                android:title="@string/by_number" />
+            <item
+                android:id="@+id/workingSort"
+                android:title="@string/by_working" />
+            <item
+                android:id="@+id/notworkingSort"
+                android:title="@string/by_not_working" />
+        </menu>
+    </item>
+</menu>

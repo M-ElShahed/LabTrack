@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "566202414303",
+    "firebase_url": "https://lab-track-2d81e.firebaseio.com",
+    "project_id": "lab-track-2d81e",
+    "storage_bucket": "lab-track-2d81e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566202414303:android:5f0bda7e7a6a463533656a",
+        "android_client_info": {
+          "package_name": "com.sci.laptrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566202414303-rdcv8bsjeodvcna3ne5ks05q3disf8oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfO5R-cWLpjxJSsmJ-0K2dt1z6GVJT4bI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566202414303-rdcv8bsjeodvcna3ne5ks05q3disf8oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566202414303:android:51db37f06bc85d1e33656a",
+        "android_client_info": {
+          "package_name": "com.sci.labtrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566202414303-rdcv8bsjeodvcna3ne5ks05q3disf8oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfO5R-cWLpjxJSsmJ-0K2dt1z6GVJT4bI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566202414303-rdcv8bsjeodvcna3ne5ks05q3disf8oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

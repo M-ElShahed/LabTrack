@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/makeBackup"
+        android:icon="@drawable/backup_icon"
+        android:title="@string/make_backup" />
+    <item
+        android:id="@+id/addIcon"
+        android:icon="@drawable/plus_sign"
+        android:title="@string/add" />
+    <item
+        android:id="@+id/restoreBackup"
+        android:icon="@drawable/restore_icon"
+        android:title="@string/restore_backup" />
+</menu>

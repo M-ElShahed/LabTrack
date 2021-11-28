@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:id="@+id/connectingLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:alpha="1"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/connectingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/connecting"
+            android:textColor="@color/textButtonsColor" />
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_23sdp" />
+    </LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/connectingLinear"
+    >
+    <RelativeLayout
+        android:id="@+id/LLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backGroundColor"
+        android:orientation="vertical"
+        tools:context=".RegisterActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_131sdp"
+            android:layout_alignParentStart="true"
+            android:background="@color/backGroundColor"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/curvelogo"
+            tools:srcCompat="@drawable/curvelogo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="@dimen/_262sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:textColorHint="@color/hintColor"
+            app:errorEnabled="true"
+            android:layout_marginStart="@dimen/_49sdp"
+            android:layout_marginEnd="@dimen/_37sdp"
+            android:outlineAmbientShadowColor="@color/hintColor"
+            android:outlineSpotShadowColor="@color/textColor"
+          >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_below="@id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:hint="@string/full_name"
+                android:drawableStart="@drawable/ic_person_black_24dp"
+                android:drawablePadding="@dimen/_6sdp"
+                android:textColor="@color/textColor"
+                android:textCursorDrawable="@color/cursor"
+                android:textSize="@dimen/_15ssp"
+                android:textColorHint="@color/hintColor"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameLayout"
+            android:textColorHint="@color/hintColor"
+            android:layout_marginStart="@dimen/_49sdp"
+            android:layout_marginEnd="@dimen/_37sdp"
+            app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_below="@id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/e_mail_address"
+                android:drawableStart="@drawable/ic_email_black_24dp"
+                android:drawablePadding="@dimen/_6sdp"
+                android:textColor="@color/textColor"
+                android:textCursorDrawable="@color/cursor"
+                android:textSize="@dimen/_15ssp"
+                android:textColorHint="@color/hintColor"
+                android:inputType="textEmailAddress"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passLayout"
+            android:layout_width="@dimen/_263sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailLayout"
+            android:textColorHint="@color/hintColor"
+            app:errorEnabled="true"
+            android:layout_marginStart="@dimen/_49sdp"
+            android:layout_marginEnd="@dimen/_37sdp"
+            app:passwordToggleEnabled="true"
+            app:counterEnabled="true"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pass"
+                android:layout_below="@id/emailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:hint="@string/passwordHint"
+                android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+                android:drawablePadding="@dimen/_6sdp"
+                android:textColor="@color/textColor"
+                android:textCursorDrawable="@color/cursor"
+                android:textSize="@dimen/_15ssp"
+                android:textColorHint="@color/hintColor"
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmLayout"
+            android:layout_width="@dimen/_263sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passLayout"
+            android:textColorHint="@color/hintColor"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
+            app:counterEnabled="true"
+            android:layout_marginStart="@dimen/_49sdp"
+            android:layout_marginEnd="@dimen/_37sdp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_49sdp"
+                android:layout_below="@id/passLayout"
+                android:drawableStart="@drawable/ic_lock_open_black_24dp"
+                android:drawablePadding="@dimen/_6sdp"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:textCursorDrawable="@color/cursor"
+                android:textSize="@dimen/_15ssp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobLayout"
+            android:layout_width="@dimen/_363sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirmLayout"
+            android:textColorHint="@color/hintColor"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="11"
+            android:layout_marginStart="@dimen/_49sdp"
+            android:layout_marginEnd="@dimen/_37sdp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mob"
+                android:layout_below="@id/confirmLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_49sdp"
+                android:hint="@string/phone"
+                android:drawableStart="@drawable/ic_phone_black_24dp"
+                android:drawablePadding="@dimen/_6sdp"
+                android:textColor="@color/textColor"
+                android:textCursorDrawable="@color/cursor"
+                android:textSize="@dimen/_15ssp"
+                android:maxLength="11"
+                android:textColorHint="@color/hintColor"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:text="@string/gender"
+            android:layout_below="@id/mobLayout"
+            android:layout_marginStart="@dimen/_49sdp"
+            android:textColor="@color/darkTextColor"
+            android:textSize="@dimen/_15ssp"
+             />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
+            android:layout_centerInParent="true"
+            android:progressTint="#3C3F41"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gender"
+            android:layout_alignStart="@+id/mobLayout"
+            android:layout_alignEnd="@+id/mobLayout"
+            android:layout_marginStart="-64dp"
+            android:layout_marginEnd="-47dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_49sdp"
+                android:checked="true"
+                android:drawableStart="@drawable/ic_male_user_svgrepo_com"
+                android:textColor="@color/darkTextColor"
+                android:textSize="@dimen/_15ssp" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_113sdp"
+                android:drawableStart="@drawable/ic_female_user_svgrepo_com"
+                android:textColor="@color/darkTextColor"
+                android:textSize="@dimen/_15ssp" />
+
+        </RadioGroup>
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="@dimen/_113sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/button_background"
+            android:includeFontPadding="false"
+            android:text="@string/submit"
+            android:layout_marginTop="@dimen/_563sdp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/textButtonsColor"
+            android:textSize="@dimen/_13ssp"
+             />
+
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>
